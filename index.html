@@ -55,7 +55,7 @@
             /* 在大屏是 600px，在小屏自动缩放，保持 95% 的屏幕宽度 */
             height: auto;           /* 让高度随内容伸缩 */
             min-height: 550px;      /* 设置一个合理的最小保底高度 */
-            width: clamp(320px, 83vw, 600px);
+            width: clamp(320px, 94vw, 600px);
             padding: clamp(20px, 5vw, 40px); /* 边距随屏幕缩小 */
             padding-bottom: 40px;   /* 给底部的版权信息留出一点呼吸空间 */
             background: linear-gradient(145deg, #8e8e8e, #757575);
@@ -119,7 +119,7 @@
         }
 
         .edu-item {
-            font-size: 0.83rem;
+            font-size: 0.94rem;
             color: #222;
             margin-bottom: 8.3px;
             display: flex;
@@ -136,7 +136,7 @@
             font-weight: bold;
             color: var(--oxford-blue);
             text-transform: uppercase;
-            font-size: 0.72rem;
+            font-size: 0.5rem;
             display: block;
             margin-bottom: 5px;
         }
@@ -145,15 +145,15 @@
             background: var(--oxford-blue);
             color: var(--pearl-white);
             padding: 4px 12px;
-            font-size: 0.72rem;
+            font-size: 0.5rem;
             font-weight: bold;
             clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
         }
 
         .copyright {
-            opacity: 0.61;
+            opacity: 0.5;
             margin-top: 30px;
-            font-size: 0.61rem;
+            font-size: 0.5rem;
             color: #444;
             text-align: right;
             border-top: 1px solid rgba(0,0,0,0.1);
@@ -262,7 +262,7 @@
             border-color: var(--electric-violet);
             transform: translateY(-2px);
             /* 悬浮时整个按钮产生微弱的紫色投影 */
-            box-shadow: 0 4px 15px rgba(98, 83, 221, 0.2);
+            box-shadow: 0 4px 15px rgba(94, 94, 221, 0.2);
         }
 
         .cyber-btn {
@@ -421,40 +421,40 @@
         .pub-entry:hover {
             border-color: var(--electric-violet);
             transform: translateX(5px);
-            background: rgba(98, 83, 221, 0.03); /* 极淡的紫色背景 */
+            background: rgba(94, 94, 221, 0.03); /* 极淡的紫色背景 */
         border-left: 5px solid var(--electric-violet);
         padding-left: 20px; /* 产生轻微位移感 */
         }
-        .pub-id { font-size: 0.61rem; color: var(--ocean-blue); font-weight: bold; margin-bottom: 5px; font-family: monospace; }
-        .pub-title { font-size: 0.95rem; color: var(--oxford-blue); font-weight: bold; text-decoration: none; display: block; margin-bottom: 8.3px; line-height: 1.2; }
-        .pub-meta { font-size: 0.83rem; color: #333; line-height: 1.4; }
+        .pub-id { font-size: 0.5rem; color: var(--ocean-blue); font-weight: bold; margin-bottom: 5px; font-family: monospace; }
+        .pub-title { font-size: 0.94rem; color: var(--oxford-blue); font-weight: bold; text-decoration: none; display: block; margin-bottom: 8.3px; line-height: 1.2; }
+        .pub-meta { font-size: 0.94rem; color: #333; line-height: 1.5; }
         .me { color: var(--fiord); font-weight: bold; border-bottom: 1px solid var(--electric-violet); }
-        .venue { font-style: italic; color: var(--ocean-blue); font-weight: 610; font-size: 0.75rem; display: block; margin-top: 5px; }
+        .venue { font-style: italic; color: var(--ocean-blue); font-weight: 500; font-size: 0.75rem; display: block; margin-top: 5px; }
 
         .close-tag {
-            font-size: 0.7rem; color: var(--oxford-blue); cursor: pointer;
-            border: 1px solid var(--oxford-blue); padding: 4px 8.3px;
+            font-size: 0.5rem; color: var(--oxford-blue); cursor: pointer;
+            border: 1px solid var(--oxford-blue); padding: 4px 9.4px;
             align-self: flex-start; margin-bottom: 20px; transition: all 0.2s;
         }
         .close-tag:hover { background: var(--oxford-blue); color: var(--pearl-white); }
 
         /* 列表排版 */
         .pub-entry { margin-bottom: 35px; }
-        .pub-id { font-size: 0.72rem; color: var(--sonic-silver); font-family: monospace; margin-bottom: 6.1px; letter-spacing: 1px; }
-        .pub-title { font-size: 1rem; color: #1a1a1a; font-weight: 500; text-decoration: none; line-height: 1.4; display: block; margin-bottom: 6.1px; transition: color 0.2s; }
+        .pub-id { font-size: 0.94rem; color: var(--sonic-silver); font-family: monospace; margin-bottom: 5px; letter-spacing: 1px; }
+        .pub-title { font-size: 1rem; color: #1a1a1a; font-weight: 500; text-decoration: none; line-height: 1.5; display: block; margin-bottom: 5px; transition: color 0.2s; }
         .pub-title:hover { color: var(--electric-violet); }
-        .pub-meta { font-size: 0.83rem; color: #666; line-height: 1.5; }
+        .pub-meta { font-size: 0.94rem; color: #666; line-height: 1.5; }
         .me { color: #000; font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
-        .venue { display: inline-block; background: #f0f0f0; color: #444; padding: 2px 6.1px; font-size: 0.72rem; font-weight: 600; margin-left: 5px; border-radius: 2px; }
+        .venue { display: inline-block; background: #f0f0f0; color: #444; padding: 2px 5px; font-size: 0.94rem; font-weight: 500; margin-left: 5px; border-radius: 2px; }
 
         .close-tag { position: absolute; top: 25px; right: 25px; font-size: 1.5rem; color: #ccc; cursor: pointer; transition: 0.3s; }
-        .close-tag:hover { color: #000; transform: rotate(90deg); }
+        .close-tag:hover { color: #000; transform: rotate(94deg); }
 
-        .copyright { margin-top: 30px; font-size: 0.61rem; color: #444; text-align: right; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 10px; }
+        .copyright { margin-top: 30px; font-size: 0.5rem; color: #444; text-align: right; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 10px; }
 
         @media screen and (max-width: 480px) {
-            h1 { font-size: 1.8rem; }
-            .edu-item { font-size: 0.7rem; }
+            h1 { font-size: 1.5rem; }
+            .edu-item { font-size: 0.5rem; }
         }
 
         /* 论文操作链接容器 */
@@ -654,7 +654,7 @@
         <div class="profile-card">
             <div class="inner-content">
                 <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-                    <div style="font-size: 0.83rem; color: #333;">     ID: H_LYU_KERNEL_Version_61</div>
+                    <div style="font-size: 0.5rem; color: #333;">     ID: H_LYU_KERNEL_Version_5</div>
                     <div class="status-tag">ACTIVE: Looking for Lab </div>
                 </div>
                 
@@ -916,7 +916,7 @@ function decryptEmail() {
         // 渲染最终效果，带上mailto链接
         container.innerHTML = `
             <a href="mailto:${fullEmail}" 
-               style="color: var(--electric-violet); font-weight: bold; text-decoration: none; font-family: monospace; animation: fadeIn 0.83s;">
+               style="color: var(--electric-violet); font-weight: bold; text-decoration: none; font-family: monospace; animation: fadeIn 0.94s;">
                >> ${fullEmail}
             </a>
         `;

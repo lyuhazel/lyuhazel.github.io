@@ -30,33 +30,33 @@
             overflow-y: auto; /* 允许滚动 */
             overflow-x: hidden;
 
-            /* 星空背景保持不变 */
+            /* 星空背景 */
             background-image: 
                 linear-gradient(rgba(0, 18, 46, 0.4), rgba(0, 18, 46, 0.4)), 
                 url('polaris.jpg'); 
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            background-attachment: fixed; /* 建议开启固定背景，滚动时更有层次感 */
+            background-attachment: fixed; /* 固定背景，更有层次感 */
         }
 
         .hero-section {
-            min-height: 96vh; /* 占满一屏 */
+            min-height: 94vh; 
             display: flex;
             justify-content: center;
             align-items: center;
             position: relative;
-            padding: 20px 0; /* 给手机端预留一点点呼吸空间 */
+            padding: 20px 0; 
         }
 
-        /* 升级：流光溢彩的金属卡片 */
+        /* 金属卡片 */
         .profile-card {
             position: relative;
-            /* 在大屏是 600px，在小屏自动缩放，保持 95% 的屏幕宽度 */
-            height: clamp(320px, 94vw, 600px);
-            width: clamp(320px, 94vw, 600px);
-            padding: clamp(20px, 5vw, 40px); /* 边距随屏幕缩小 */
-            padding-bottom: 40px;   /* 给底部的版权信息留出一点呼吸空间 */
+            /* 在大屏是 500px，在小屏自动缩放，保持 94% 的屏幕宽度 */
+            height: clamp(320px, 94vw, 500px);
+            width: clamp(320px, 94vw, 500px);
+            padding: clamp(20px, 5vw, 50px); /* 边距随屏幕缩小 */
+            padding-bottom: 50px;   /* 给底部的版权信息留出空间 */
             background: linear-gradient(145deg, #8e8e8e, #757575);
             border: 1px solid rgba(255,255,255,0.3);
             clip-path: polygon(0% 20px, 20px 0%, 100% 0%, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0% 100%);
@@ -78,7 +78,7 @@
             background: linear-gradient(145deg, #a1a1a1, #757575);
             padding: 11px;
             position: relative;
-            margin: 4px; /* 重点：留出 4px 的间隙，让流光只在这个“缝隙”里闪烁 */
+            margin: 5px; /* 流光 */
             height: calc(100% - 8px); /* 减去 margin 占据的空间 */
             /* 保持切角风格 */
             clip-path: polygon(0% 20px, 20px 0%, 100% 0%, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0% 100%);
@@ -93,7 +93,7 @@
             width: 200%;
             height: 200%;
             background: conic-gradient(transparent, var(--electric-violet), transparent 30%);
-            animation: rotate-light 6s linear infinite;
+            animation: rotate-light 5s linear infinite;
             z-index: 0;
         }
         
@@ -126,7 +126,7 @@
         }
 
         .edu-item::before {
-            content: '◈';
+            content: '•';
             color: var(--ocean-blue);
             margin-right: 10px;
         }
@@ -143,17 +143,17 @@
         .status-tag {
             background: var(--oxford-blue);
             color: var(--pearl-white);
-            padding: 4px 12px;
+            padding: 5px 12px;
             font-size: 0.5rem;
             font-weight: bold;
-            clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
+            clip-path: polygon(0 0, 100% 0, 94% 100%, 5% 100%);
         }
 
         .copyright {
             opacity: 0.5;
             margin-top: 30px;
             font-size: 0.5rem;
-            color: #444;
+            color: #999;
             text-align: right;
             border-top: 1px solid rgba(0,0,0,0.1);
             padding-top: 10px;
@@ -179,9 +179,9 @@
         } */
          
 
-        /* Email 专用容器：固定高度和最小宽度，防止解密时撑开高度 */
+        /* Email 固定最小宽度 */
         #email-container {
-            min-width: 180px; /* 预留出邮箱的宽度 */
+            min-width: 194px; /* 预留出邮箱的宽度 */
             height: 32px;
             display: flex;
             align-items: center;
@@ -190,10 +190,10 @@
         /* 强制按钮容器在极窄屏下也不换行 */
         .social-grid {
             display: flex;
-            flex-direction: row; /* 强制横向 */
-            flex-wrap: nowrap;   /* 绝对不换行 */
+            flex-direction: row; /* 强制 */
+            flex-wrap: nowrap;   /* 不换行 */
             gap: 5px;
-            overflow-x: visible; /* 允许微量溢出或通过缩小按钮自适应 */
+            overflow-x: visible; 
         }
             
         .social-icon-btn {
@@ -205,15 +205,15 @@
             font-weight: bold;
             height: 32px; /* 统一高度 */
             box-sizing: border-box;
-            padding: 0 clamp(4px, 1.5vw, 10px);
-            border-radius: 4px;
+            padding: 0 clamp(5px, 1.5vw, 10px);
+            border-radius: 5px;
             background: rgba(255, 255, 255, 0.1);
             border: 1px solid rgba(0, 0, 0, 0.1);
             display: inline-flex;
             align-items: center;
             justify-content: center; /* 居中对齐图标和文字 */
-            gap: 6px;
-            transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+            gap: 5px;
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
             
             /* 增强刻印效果 */
             /* text-shadow: -0.5px -0.5px 1px rgba(0,0,0,0.6); *//* 看起来效果不是很好，以后再修改吧 */
@@ -222,7 +222,7 @@
         /* 针对手机端的微调 */
         @media screen and (max-width: 480px) {
             h1 { font-size: 1.8rem; }
-            .edu-item { font-size: 0.7rem; }
+            .edu-item { font-size: 0.5rem; }
             .label { font-size: 0.65rem; }
             .status-tag { padding: 2px 8px; font-size: 0.6rem; }
             .copyright { font-size: 0.5rem; margin-top: 15px; }
@@ -260,7 +260,7 @@
             background: rgba(255, 255, 255, 0.2);
             border-color: var(--electric-violet);
             transform: translateY(-2px);
-            /* 悬浮时整个按钮产生微弱的紫色投影 */
+            /* 悬浮时整个按钮产生紫色投影 */
             box-shadow: 0 4px 15px rgba(94, 94, 221, 0.2);
         }
 
@@ -277,7 +277,7 @@
             text-transform: uppercase;
             /* letter-spacing: 1px; */
 
-            /* 外阴影：增加立体悬浮感 */
+            /* 增加立体感 */
             box-shadow: 2px 2px 0px var(--oxford-blue), 
                         inset 1px 1px 1px rgba(255,255,255,0.4);
                         
@@ -295,37 +295,33 @@
         .cyber-btn:hover {
             background: var(--oxford-blue);
             color: var(--pearl-white);
-            /* 发光，像机器启动时的状态灯 */
+            /* 发光像机器启动时的状态灯 */
             box-shadow: 0 0 15px rgba(98, 81, 221, 0.5); 
-            transform: translateY(-2px); /* 悬浮感 */
+            transform: translateY(-2px);  
             padding-left: 11px; /* 悬停时文字微右移，模拟点击预备 */
         }
 
         .cyber-btn:active {
             transform: scale(0.95); /* 按压反馈 */
-            background: var(--electric-violet); /* 点击瞬间变成紫色，像高压电流通过 */
+            background: var(--electric-violet); 
             border-color: var(--electric-white);
         }
 
-        /* CV 按钮的特殊高亮 */
         .cv-highlight {
             border-color: var(--slate-gray);
             position: relative;
         }
 
-        /* Scholar 按钮的特殊高亮 */
         .gs-highlight {
             border-color: var(--slate-gray);
             position: relative;
         }
 
-        /* Email 按钮的特殊高亮 */
         .email-highlight {
             border-color: var(--slate-gray);
             position: relative;
         }
 
-        /* 状态栏的光标闪烁 */
         .blink {
             animation: step-end-blink 1s infinite;
         }
@@ -335,12 +331,9 @@
             50% { opacity: 0; }
         }
 
-        /* 论文查看提示的呼吸感 */
-        /* 闪烁光标 */
         .blink { animation: step-end-blink 1s infinite; }
         @keyframes step-end-blink { from, to { opacity: 1; } 50% { opacity: 0; } }
 
-        /* 呼吸感提示标签 */
         .pub-hint {
             /* font-weight: bold; */
             font-size: 0.6rem;
@@ -353,13 +346,13 @@
             pointer-events: none;
         }
         @keyframes pulse-hint {
-            0% { opacity: 0.4; }
-            50% { opacity: 1; box-shadow: 0 0 10px rgba(98, 81, 221, 0.4); }
-            100% { opacity: 0.4; }
+            0% { opacity: 0.5; }
+            50% { opacity: 1; box-shadow: 0 0 10px rgba(98, 81, 221, 0.5); }
+            100% { opacity: 0.5; }
         }
 
 
-        /* 4. 第二部分：Paper 列表 (UVD 极简风格) */
+        /* Paper 列表 */
     
         .content-section {
             background: rgba(255, 255, 255, 0.98); 
@@ -380,13 +373,13 @@
             font-weight: 800;
             color: var(--oxford-blue);
             margin-bottom: 50px;
-            border-left: 4px solid var(--electric-violet);
+            border-left: 5px solid var(--electric-violet);
             padding-left: 15px;
             letter-spacing: 1px;
         }
 
         .pub-entry {
-            margin-bottom: 40px;
+            margin-bottom: 50px;
             transition: transform 0.3s ease;
             border-left: 3px solid transparent; /* 预留位置 */
         }
@@ -394,7 +387,7 @@
         .pub-id { font-size: 0.75rem; color: var(--sonic-silver); font-family: monospace; margin-bottom: 8px; }
         .pub-title { font-size: 1.1rem; color: #000; font-weight: 600; text-decoration: none; display: block; margin-bottom: 8px; line-height: 1.4; }
         .pub-title:hover { color: var(--electric-violet); }
-        .pub-meta { font-size: 0.9rem; color: #555; line-height: 1.6; }
+        .pub-meta { font-size: 0.94rem; color: #555; line-height: 1.6; }
         .me { color: #000; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
         .venue { display: inline-block; background: #f0f0f2; color: var(--ocean-blue); padding: 2px 8px; font-size: 0.75rem; font-weight: 700; margin-top: 8px; border-radius: 3px; }
 
@@ -420,9 +413,9 @@
         .pub-entry:hover {
             border-color: var(--electric-violet);
             transform: translateX(5px);
-            background: rgba(94, 94, 221, 0.03); /* 极淡的紫色背景 */
+            background: rgba(94, 94, 221, 0.03); 
         border-left: 5px solid var(--electric-violet);
-        padding-left: 20px; /* 产生轻微位移感 */
+        padding-left: 20px; 
         }
         .pub-id { font-size: 0.5rem; color: var(--ocean-blue); font-weight: bold; margin-bottom: 5px; font-family: monospace; }
         .pub-title { font-size: 0.94rem; color: var(--oxford-blue); font-weight: bold; text-decoration: none; display: block; margin-bottom: 8.3px; line-height: 1.2; }
@@ -444,7 +437,7 @@
         .pub-title:hover { color: var(--electric-violet); }
         .pub-meta { font-size: 0.94rem; color: #666; line-height: 1.5; }
         .me { color: #000; font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
-        .venue { display: inline-block; background: #f0f0f0; color: #444; padding: 2px 5px; font-size: 0.94rem; font-weight: 500; margin-left: 5px; border-radius: 2px; }
+        .venue { display: inline-block; background: #f0f0f0; color: #555; padding: 2px 5px; font-size: 0.94rem; font-weight: 500; margin-left: 5px; border-radius: 2px; }
 
         .close-tag { position: absolute; top: 25px; right: 25px; font-size: 1.5rem; color: #ccc; cursor: pointer; transition: 0.3s; }
         .close-tag:hover { color: #000; transform: rotate(94deg); }
@@ -491,9 +484,8 @@
             transform: translateY(0);
         }
 
-        /* 图标微调 */
         .pub-btn i {
-            margin-right: 4px;
+            margin-right: 5px;
             font-size: 0.7rem;
         }
 
@@ -506,10 +498,10 @@
             border-left: 2px solid var(--oxford-blue);
             font-family: 'Courier New', monospace;
             font-size: 0.75rem;
-            color: #444;
+            color: #555;
             white-space: pre-wrap; /* 保留缩进 */
             position: relative;
-            animation: slideDown 0.3s ease-out;
+            animation: slideDown 0.5s ease-out;
         }
 
         /* 复制成功提示 */
@@ -517,10 +509,10 @@
             position: absolute;
             top: 5px;
             right: 10px;
-            font-size: 0.6rem;
+            font-size: 0.5rem;
             color: var(--electric-violet);
             opacity: 0;
-            transition: opacity 0.3s;
+            transition: opacity 0.5s;
         }
 
         @keyframes slideDown {
@@ -528,13 +520,12 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* 筛选器主容器 */
         .filter-toolbar {
             background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(10px); /* 磨砂玻璃效果 */
             border: 1px solid rgba(0, 18, 46, 0.1);
             padding: 20px;
-            border-radius: 4px; /* 微圆角 */
+            border-radius: 5px; /* 微圆角 */
             margin-bottom: 40px;
             display: flex;
             flex-wrap: wrap;
@@ -556,7 +547,7 @@
             border-bottom: 1px solid var(--oxford-blue);
             padding: 8px 0 8px 30px;
             font-family: inherit;
-            font-size: 0.9rem;
+            font-size: 0.94rem;
             color: var(--oxford-blue);
             outline: none;
         }
@@ -579,7 +570,7 @@
 
         .year-chips {
             display: flex;
-            gap: 8px;
+            gap: 9.4px;
             border-radius: 20px;
         }
 
@@ -587,9 +578,9 @@
             font-family: 'ATC Mapel', monospace;
             font-size: 0.7rem;
             font-weight: bold;
-            padding: 4px 12px;
+            padding: 5px 12px;
             border: 1px solid rgba(0, 18, 46, 0.1);
-            border-radius: 20px; /* 药丸形状 */
+            border-radius: 20px; 
             cursor: pointer;
             transition: all 0.2s ease;
             background: transparent;
@@ -601,12 +592,11 @@
             color: var(--electric-violet);
         }
 
-        /* 激活状态 */
         .year-chip.active {
             background: var(--oxford-blue);
             color: var(--pearl-white);
             border-color: var(--oxford-blue);
-            box-shadow: 0 4px 10px rgba(0, 18, 46, 0.2);
+            box-shadow: 0 5px 10px rgba(0, 18, 46, 0.2);
         }
 
         #backToTop {
@@ -633,9 +623,8 @@
             box-shadow: 0 0 15px var(--electric-violet);
         }
 
-        /* 3. 强化版光标闪烁 */
         .blink.active {
-            animation: rapid-blink 0.1s infinite;
+            animation: rapid-blink 0.3s infinite;
         }
 
         @keyframes rapid-blink {
@@ -654,7 +643,7 @@
             <div class="inner-content">
                 <div style="display: flex; justify-content: space-between; align-items: flex-start;">
                     <div style="font-size: 0.5rem; color: #333;">     ID: H_LYU_KERNEL_Version_5</div>
-                    <div class="status-tag">ACTIVE: Looking for Lab </div>
+                    <div class="status-tag">ACTIVE: Research in Reinforcement Learning /& Robotics </div>
                 </div>
                 
                 <h1>HAIYUN LYU</h1>
@@ -699,23 +688,25 @@
                 <div style="margin-top: 11px;">
                     <span class="label">[ DATA_STREAM: CURRENT_UPLINK ]</span>
                     <div style="color: #222; font-size: 0.9rem; padding-left: 15px;">
-                        Lab & Mentor Loading ... | Project: Context Generation (SQL)
+                        Lab & Mentor Loading ... 
+                        Prof. Erdem Bıyık
+                        Yutai Zhou [PhD]
                     </div>
                 </div>
                 
                 <div style="margin-top: 11px;">
                     <span class="label">[ FUTURE_MODULES ]</span>
-                    <div style="color: #444; font-size: 0.8rem; padding-left: 15px; letter-spacing: 1px;">
+                    <div style="color: #555; font-size: 0.94rem; padding-left: 15px; letter-spacing: 1px;">
                         PROSTHETICS | INDUSTRY 4.0 | ARCHITECTURE
                     </div>
                 </div>
                 
                 <div style="margin-top: 11px; font-size: 0.75rem; color: var(--pearl-white); display: flex; flex-direction: column; gap: 3px;">
                     <div style="font-family: monospace; opacity: 0.8;"> 
-                        >> nano ~/catkin/research/.human_robot_interaction
+                        >> nano ~/catkin/research/.robotics
                     </div>
                     <div style="font-family: monospace; opacity: 0.8;"> 
-                        >> source ~/catkin/research/.human_robot_interaction
+                        >> source ~/catkin/research/.robotics
                     </div>
                     <div style="font-family: monospace; opacity: 0.8;"> 
                         >> cd ~/catkin_ws && catkin_make
@@ -724,10 +715,10 @@
                          >> source devel/setup.bash
                     </div>
                     <div style="font-family: monospace; opacity: 0.8;"> 
-                         >> roslaunch research_hri human_centric.launch
+                         >> roslaunch research_robotics human_centric.launch
                     </div>
      
-                    <div style="padding-left: 15px; height: 21px; display: flex; align-items: center;">
+                    <div style="padding-left: 15px; height: 20px; display: flex; align-items: center;">
                         <span class="pub-hint">
                         HINT: SCROLL DOWN or PRESS 'ENTER' TO INITIALIZE RESEARCH_LOG
                         </span>
@@ -907,7 +898,7 @@ function decryptEmail() {
     btn.style.borderColor = "var(--electric-violet)";
     
     setTimeout(() => {
-        // 拼接混淆的邮箱，静态扫描
+        // 拼接静态扫描
         const user = "haiyun";
         const domain = "usc.edu";
         const fullEmail = user + "@" + domain;
@@ -933,7 +924,7 @@ function toggleBibtex(id) {
 }
 
 function copyToClipboard(element) {
-    // 获取文本内容（排除提示文字）
+    // 获取文本内容, 排除提示文字
     const text = element.innerText.replace("CLICK TO COPY", "").trim();
     navigator.clipboard.writeText(text).then(() => {
         const hint = element.querySelector('.copy-hint');
@@ -949,16 +940,15 @@ function copyToClipboard(element) {
 let currentYearFilter = 'all';
 
 function filterByYear(year, element) {
-    // 切换标签高亮
     document.querySelectorAll('.year-chip').forEach(chip => chip.classList.remove('active'));
     element.classList.add('active');
     
     currentYearFilter = year;
-    executeFilter(); // 执行最终过滤
+    executeFilter(); 
 }
 
 function filterPapers() {
-    // 这里的函数由搜索框 onkeyup 触发
+    // 由搜索框 onkeyup 触发
     executeFilter();
 }
 
@@ -969,14 +959,14 @@ function executeFilter() {
     papers.forEach(paper => {
         const title = paper.querySelector('.pub-title').innerText.toLowerCase();
         const meta = paper.querySelector('.pub-meta').innerText.toLowerCase();
-        const idText = paper.querySelector('.pub-id').innerText; // 如 "ICML 2025"
+        const idText = paper.querySelector('.pub-id').innerText; 
         
         const matchesSearch = title.includes(searchTerm) || meta.includes(searchTerm);
         const matchesYear = (currentYearFilter === 'all') || idText.includes(currentYearFilter);
 
         if (matchesSearch && matchesYear) {
             paper.style.display = "block";
-            paper.style.animation = "fadeIn 0.4s ease forwards";
+            paper.style.animation = "fadeIn 0.5s ease forwards";
         } else {
             paper.style.display = "none";
         }
@@ -990,24 +980,23 @@ function setSearch(tag) {
 }
 
 //小光标就很适合打一下回车键快速到pub
-// 1. 监听回车键
 document.addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
         const cursor = document.querySelector('.blink');
         const contentSection = document.querySelector('.content-section');
         
-        // 视觉反馈：光标疯狂闪烁
+        // 光标闪烁
         cursor.classList.add('active');
         
         setTimeout(() => {
             contentSection.scrollIntoView({ behavior: 'smooth' });
             cursor.classList.remove('active');
              console.log(">> UPLINK_SUCCESS: RESEARCH_LOG_INITIALIZED"); // 模拟一个系统加载提示
-        }, 300); // 300ms 后跳转
+        }, 500); // 500ms 后跳转
     }
 });
 
-// 2. 控制 Back to Top 按钮显示
+// 控制 Back to Top 按钮显示
 window.onscroll = function() {
     const btn = document.getElementById('backToTop');
     if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
